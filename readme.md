@@ -1,9 +1,13 @@
 # Short summary & Block diagram
-This repo is the accompanied by the paper A. Vashagh, A. Akhoondkazemi, S J. Zahabi, D. Shafie, ”Enhanced Atrial Fibrillation (AF) Detection via
-Data Augmentation with Diffusion Model,” 2023 International Conference on Electrical Engineering
-(ICCKE), Mashhad, Iran. In this project, we tried to convert a 1-D image to a 2-D image and then use a form of Diffusion Model to augment the data. The block diagram below depicts the big picture of what we have done. For more details, check out our paper.
+This repository is an accompaniment to the paper titled "Enhanced Atrial Fibrillation (AF) Detection via Data Augmentation with Diffusion Model," authored by A. Vashagh, A. Akhoondkazemi, S. J. Zahabi, and D. Shafie, presented at the 2023 International Conference on Electrical Engineering (ICCKE) in Mashhad, Iran. Our project aimed to enhance atrial fibrillation detection by converting a 1-D image into a 2-D image and applying a Diffusion Model-based data augmentation technique. The provided block diagram offers an overview of our methodology. For in-depth insights, please refer to our paper.
 
 ![Block diagram](/figures/block-diagram.png)
+
+# System Details
+- System Model: ASUS TUF Dash F15
+- Processor: 12th Gen Intel(R) Core(TM) i7-12650H   2.30 GHz
+- Installed RAM: 32.0 GB (31.6 GB usable)
+- Graphics Card: NVIDIA GeForce RTX 3070 Laptop GPU
 
 
 # Requirement
@@ -20,16 +24,13 @@ pip install -r requirements.txt
 
 
 # Code structure
-Most of the core matlab code was written as a part of the origianl 2017 physionet contest by the blackswan group that won the competition.
-Some of the matlab scripting and all of the python code was written by the authors of the paper.
+The majority of the core MATLAB code was originally written as part of the 2017 PhysioNet contest by the BlackSwan group, who were the winners of the competition. The authors of the paper contributed the Python code and some additional MATLAB scripting.
 
 ### R-R Extraction
-We have used the R-peak detection code from blackswan to speed up the development of our algorithm. 
-In the first part of our work, we extract the R-peaks and store them in a matlab cell. This is done by RrExtraction.m 
+To expedite the development of our algorithm, we utilized the R-peak detection code from the BlackSwan group. In the initial phase of our work, we extracted the R-peaks and stored them in a MATLAB cell using the 'RrExtraction.m' script.
 
 ### Preprocessing and image-Construction
-In this part, we load the R-R intervals in python and create the preprocessed Poincare images.
-A couple of preprocessed images are shown below. The first one is an example of an AF image and the second one is an example of a normal image.
+Subsequently, we loaded the R-R intervals in Python and proceeded to generate the preprocessed Poincaré images. Below are a few examples of the preprocessed images. The first example represents an atrial fibrillation (AF) image, while the second example illustrates a normal image.
 
 <p align="center">
 <img src="/figures/af.png" width="400" height="400" />
