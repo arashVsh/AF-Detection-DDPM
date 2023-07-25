@@ -13,7 +13,7 @@ This repository is an accompaniment to the paper titled "Enhanced Atrial Fibrill
 # Requirement
 ### Matlab 
  Access to Matlab program and command line 
-### python 3.8.10
+### python 3.11.4
 Install the requirements using
 
 ```
