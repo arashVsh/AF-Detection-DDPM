@@ -1,5 +1,5 @@
 # Short summary & Block diagram
-This repository is an accompaniment to the paper titled "Enhanced Atrial Fibrillation (AF) Detection via Data Augmentation with Diffusion Model," authored by A. Vashagh, A. Akhoondkazemi, S. J. Zahabi, and D. Shafie, presented at the 2023 International Conference on Electrical Engineering (ICCKE) in Mashhad, Iran. Our project aimed to enhance atrial fibrillation detection by converting a 1-D image into a 2-D image and applying a Diffusion Model-based data augmentation technique. The provided block diagram offers an overview of our methodology. For in-depth insights, please refer to our paper.
+This repository is an accompaniment to the paper titled "Enhanced Atrial Fibrillation (AF) Detection via Data Augmentation with Diffusion Model," authored by A. Vashagh, A. Akhoondkazemi, S. J. Zahabi, and D. Shafie, presented at the 2023 International Conference on Computer and Knowledge Engineering (ICCKE) in Mashhad, Iran. Our project aimed to enhance atrial fibrillation detection by converting a 1-D image into a 2-D image and applying a Diffusion Model-based data augmentation technique. The provided block diagram offers an overview of our methodology. For in-depth insights, please refer to our paper.
 
 ![Block diagram](/figures/block-diagram.png)
 
@@ -13,7 +13,7 @@ This repository is an accompaniment to the paper titled "Enhanced Atrial Fibrill
 # Requirement
 ### Matlab 
  Access to Matlab program and command line 
-### python 3.11.4
+### Python 3.11.4
 Install the requirements using
 
 ```
