@@ -7,15 +7,11 @@ Original file is located at
     https://colab.research.google.com/drive/15o7KRaSeP5vRAIBbWxUVi8xWbgTs6eXf
 """
 
-import tensorflow as tf
 import numpy as np
 import matplotlib.pyplot as plt
 from skimage import data
 import scipy.io as sio
-from ImageResizer import cropper
-from Settings import IMAGE_SIZE
-
-print(tf.version)
+from Path import AF_FILE_PATH, NORMAL_FILE_PATH
 
 
 normal = sio.loadmat("./checkpoint_data/after_matlab_scripts/NormalRPeaks.mat")
@@ -24,10 +20,6 @@ af = sio.loadmat("./checkpoint_data/after_matlab_scripts/AfRPeaks.mat")
 normalImages = np.empty([normal["NormalRPeaks"].shape[1], 360, 360])
 afImages = np.empty([af["AfRPeaks"].shape[1], 360, 360])
 
-normalImagesCropped = np.empty(
-    [normal["NormalRPeaks"].shape[1], IMAGE_SIZE, IMAGE_SIZE]
-)
-afImagesCropped = np.empty([af["AfRPeaks"].shape[1], IMAGE_SIZE, IMAGE_SIZE])
 
 for i in range(0, normal["NormalRPeaks"].shape[1]):
     print("i")
@@ -45,7 +37,7 @@ for i in range(0, normal["NormalRPeaks"].shape[1]):
     image = image[:, :, 0] / 256
     normalImages[i, :, :] = image
 
-np.save("./checkpoint_data/after_preprocessing/normalImages.npy", normalImages)
+np.save(NORMAL_FILE_PATH, normalImages)
 
 
 for i in range(0, af["AfRPeaks"].shape[1]):
@@ -67,19 +59,4 @@ for i in range(0, af["AfRPeaks"].shape[1]):
 
     print(image.shape)
 
-np.save("./checkpoint_data/after_preprocessing/afImages.npy", afImages)
-normalImages = np.empty([normal["NormalRPeaks"].shape[1], 360, 360])
-afImages = np.empty([af["AfRPeaks"].shape[1], 360, 360])
-
-normalImagesCropped = np.empty(
-    [normal["NormalRPeaks"].shape[1], IMAGE_SIZE, IMAGE_SIZE]
-)
-afImagesCropped = np.empty([af["AfRPeaks"].shape[1], IMAGE_SIZE, IMAGE_SIZE])
-
-normalImagesCropped = cropper(normalImages, IMAGE_SIZE)
-np.save(
-    "./checkpoint_data/after_preprocessing/normalImagesCropped.npy", normalImagesCropped
-)
-
-afImagesCropped = cropper(afImages, IMAGE_SIZE)
-np.save("./checkpoint_data/after_preprocessing/afImagesCropped.npy", afImagesCropped)
+np.save(AF_FILE_PATH, afImages)

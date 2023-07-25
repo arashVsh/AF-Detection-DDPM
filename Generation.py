@@ -24,7 +24,7 @@ def generate(samples, folderName:str):
     from torch.optim import Adam
 
     LOSS_FILE_NAME = 'Loss.txt'
-    if folderName == 'eps_images\\1': # First call of generate function
+    if folderName == 'eps_images/1': # First call of generate function
         with open(LOSS_FILE_NAME, 'w') as file:
             file.truncate(0) # Clear the content of LOSS_FILE_NAME file
 
@@ -69,7 +69,7 @@ def generate(samples, folderName:str):
 
         # Showing the figure
         plt.show()
-        eps_saveImage(images[0, :, :], folderName=folderName + '\\Noising\\', fileName=title)
+        eps_saveImage(images[0, :, :], folderName=folderName + '/Noising/', fileName=title)
 
 
     def show_first_batch(loader):
@@ -287,5 +287,5 @@ def generate(samples, folderName:str):
     generated = np.squeeze(generated, axis=1)
     generated = magnifier(generated)
     for i in range(15):
-        eps_saveImage(generated[i, :, :], folderName=folderName + '\\Generated_Images\\', fileName=str(i))
+        eps_saveImage(generated[i, :, :], folderName=folderName + '/Generated_Images/', fileName=str(i))
     return generated

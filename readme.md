@@ -1,5 +1,7 @@
 # Short summary & Block diagram
-This repo is the accompanied by the paper --------. In this project, we tried to convert a 1-D image to a 2-D image and then use a form of GAN to augment the data. The block diagram below depicts the big picture of what we have done. For more details, check out our paper.
+This repo is the accompanied by the paper A. Vashagh, A. Akhoondkazemi, S J. Zahabi, D. Shafie, ”Enhanced Atrial Fibrillation (AF) Detection via
+Data Augmentation with Diffusion Model,” 2023 International Conference on Electrical Engineering
+(ICCKE), Mashhad, Iran. In this project, we tried to convert a 1-D image to a 2-D image and then use a form of Diffusion Model to augment the data. The block diagram below depicts the big picture of what we have done. For more details, check out our paper.
 
 ![Block diagram](/figures/block-diagram.png)
 
